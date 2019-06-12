@@ -20,17 +20,11 @@ class Dataviz31 extends Dataviz
     const FONC_RECHEMP_NAME = "Recherche d’emploi";
     const FONC_POURETU_NAME = "Poursuite d’études";
 
-    private $dataJson;
-
-    protected $filters;
-
-    protected $db;
-
     public function __construct( $db ) {
         parent::__construct($db);
     }
 
-    private function build() {
+    protected function build() {
         /*
             Cat1 : Développeurs
             SS Cat1.1 : Front | SS Cat1.2 : Back | SS Cat1.3 : Fullstack | SS Cat1.4 : Poursuites d’études dans le dev
@@ -233,10 +227,5 @@ class Dataviz31 extends Dataviz
         );
         
         $this->dataJson = json_encode($result);
-    }  
-
-    public function get() {
-        $this->build();
-        return $this->dataJson;
     }
 }

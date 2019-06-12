@@ -15,17 +15,11 @@ class Dataviz13 extends Dataviz
     const DATA_CIV_HOM_NAME = "Hommes";
     const DATA_CIV_FEM_NAME = "Femme";
 
-    private $dataJson;
-
-    protected $filters;
-
-    protected $db;
-
     public function __construct( $db ) {
         parent::__construct($db);
     }
 
-    private function build() {
+    protected function build() {
         $eleves = DAOFactory::get('eleve')->getAll( $this->filters );
         
         $result = array();
@@ -55,10 +49,5 @@ class Dataviz13 extends Dataviz
         }
         
         $this->dataJson = json_encode($result);
-    }  
-
-    public function get() {
-        $this->build();
-        return $this->dataJson;
     }
 }

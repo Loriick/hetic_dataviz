@@ -18,17 +18,11 @@ class Dataviz11 extends Dataviz
     const DATA_SAN_DIP_NAME = "Sans diplômes";
     const DATA_SAL_CHO_NAME = "Anciens salarié / chômeur";
 
-    private $dataJson;
-
-    protected $filters;
-
-    protected $db;
-
     public function __construct( $db ) {
         parent::__construct($db);
     }
 
-    private function build() {
+    protected function build() {
         $eleves = DAOFactory::get('eleve')->getAll( $this->filters );
         
         $result = array();
@@ -105,10 +99,5 @@ class Dataviz11 extends Dataviz
         }
 
         $this->dataJson = json_encode($result);
-    }
-
-    public function get() {
-        $this->build();
-        return $this->dataJson;
     }
 }

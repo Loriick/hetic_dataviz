@@ -19,17 +19,11 @@ class Dataviz21 extends Dataviz
     const DATA_POU_ETU_NAME = "Poursuite d’études";
     const DATA_ENTREPR_NAME = "Entreprenariat";
 
-    private $dataJson;
-
-    protected $filters;
-
-    protected $db;
-
     public function __construct( $db ) {
         parent::__construct($db);
     }
 
-    private function build() {
+    protected function build() {
         //get les eleves si un filtre est parametré pour filtrer les resultat de la dataviz 
         //en fonction de ce paramètre eleve
         $eleves = null;
@@ -110,10 +104,5 @@ class Dataviz21 extends Dataviz
         );
         
         $this->dataJson = json_encode($result);
-    }  
-
-    public function get() {
-        $this->build();
-        return $this->dataJson;
     }
 }

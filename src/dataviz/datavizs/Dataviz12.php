@@ -22,17 +22,11 @@ class Dataviz12 extends Dataviz
     const DATA_SAN_DIP_NAME = "Evolution du % de Sans diplômes par rapport à " . self::BASE_ANNEE;
     const DATA_SAL_CHO_NAME = "Evolution du % d'Anciens salarié / chômeur par rapport à ". self::BASE_ANNEE;
 
-    private $dataJson;
-
-    protected $filters;
-
-    protected $db;
-
     public function __construct( $db ) {
         parent::__construct($db);
     }
 
-    private function build() {
+    protected function build() {
         $this->filters->add(new Filter('date_sortie_hetic', self::BASE_ANNEE));
         $dataBaseAnnee = $this->getData();
         $result = array();
@@ -134,10 +128,5 @@ class Dataviz12 extends Dataviz
         }
 
         return $result;
-    }
-
-    public function get() {
-        $this->build();
-        return $this->dataJson;
     }
 }
