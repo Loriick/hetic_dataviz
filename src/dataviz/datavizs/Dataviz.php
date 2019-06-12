@@ -7,14 +7,12 @@ use App\model\DAOFactory;
 
 class Dataviz
 {
-    protected $db;
-
     protected $filters;
 
     protected $dataJson;
 
-    public function __construct( $db = null ) {
-        $this->db = $db;
+    public function __construct() {
+        $this->dataJson = json_encode(array());
     }
 
     protected function build() { }

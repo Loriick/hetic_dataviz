@@ -22,8 +22,8 @@ class Dataviz12 extends Dataviz
     const DATA_SAN_DIP_NAME = "Evolution du % de Sans diplômes par rapport à " . self::BASE_ANNEE;
     const DATA_SAL_CHO_NAME = "Evolution du % d'Anciens salarié / chômeur par rapport à ". self::BASE_ANNEE;
 
-    public function __construct( $db ) {
-        parent::__construct($db);
+    public function __construct() {
+        parent::__construct();
     }
 
     protected function build() {

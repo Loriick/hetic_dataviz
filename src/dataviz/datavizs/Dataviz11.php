@@ -18,8 +18,8 @@ class Dataviz11 extends Dataviz
     const DATA_SAN_DIP_NAME = "Sans diplômes";
     const DATA_SAL_CHO_NAME = "Anciens salarié / chômeur";
 
-    public function __construct( $db ) {
-        parent::__construct($db);
+    public function __construct() {
+        parent::__construct();
     }
 
     protected function build() {

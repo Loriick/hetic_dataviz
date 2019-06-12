@@ -19,8 +19,8 @@ class Dataviz21 extends Dataviz
     const DATA_POU_ETU_NAME = "Poursuite d’études";
     const DATA_ENTREPR_NAME = "Entreprenariat";
 
-    public function __construct( $db ) {
-        parent::__construct($db);
+    public function __construct() {
+        parent::__construct();
     }
 
     protected function build() {

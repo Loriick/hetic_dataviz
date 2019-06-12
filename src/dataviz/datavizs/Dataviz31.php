@@ -20,8 +20,8 @@ class Dataviz31 extends Dataviz
     const FONC_RECHEMP_NAME = "Recherche d’emploi";
     const FONC_POURETU_NAME = "Poursuite d’études";
 
-    public function __construct( $db ) {
-        parent::__construct($db);
+    public function __construct() {
+        parent::__construct();
     }
 
     protected function build() {
