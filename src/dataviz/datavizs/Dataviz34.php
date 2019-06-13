@@ -38,7 +38,7 @@ class Dataviz34 extends Dataviz
             $filters->add(new Filter('idEleve', $eleveObj->id()));
             $assocs = DAOFactory::get('assoc_data_periode')->getAll($filters);
 
-            //get groupe socio pro
+            //get groupe socio pro determinant pour le placement de l'élève
             $groupeEleve6moi = null;
             $groupeEleveActu = null;
             foreach($assocs as $assoc_data_periodeObj) {

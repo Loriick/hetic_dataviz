@@ -9,7 +9,7 @@ use App\dataviz\datavizs\Filter;
 class DatavizController 
 {
     public function __construct() {
-        //header('Content-Type: application/json; charset=utf-8');
+        header('Content-Type: application/json; charset=utf-8');
     }
 
     private function parseFilter( $args = array() ) {
@@ -47,5 +47,9 @@ class DatavizController
 
     public function dataviz34( $args = null) {        
         echo DatavizFactory::get('3.4')->filter( $this->parseFilter($args) )->get();
+    }
+
+    public function dataviz41( $args = null) {        
+        echo DatavizFactory::get('4.1')->filter( $this->parseFilter($args) )->get();
     }
 }

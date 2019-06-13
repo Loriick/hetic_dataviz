@@ -8,18 +8,23 @@ use App\dataviz\Entities\Eleve;
 
 class EleveDAO extends DAO 
 {
-
     const TABLE_NAME = 'eleve';
+    const ID_NAME = 'idEleve';
 
     public function __construct( $db ) {
         parent::__construct($db);
     }
 
     public function getOne($id) {
-        $sql = "SELECT * FROM " . self::TABLE_NAME . " WHERE idEleve = $id";
+        $sql = "SELECT * FROM " . self::TABLE_NAME . " WHERE ". self::ID_NAME ." = $id";
         $sth = $this->db->query($sql);
         $props = $sth->fetch();
-        return new Eleve($props);
+        if($props) {
+            return new Eleve($props);
+        }
+        else{
+            return null;
+        }
     }
 
     public function getAll( FilterList $filters = null ) {
