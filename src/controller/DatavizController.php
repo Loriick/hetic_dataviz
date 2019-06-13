@@ -9,7 +9,7 @@ use App\dataviz\datavizs\Filter;
 class DatavizController 
 {
     public function __construct() {
-        //header('Content-Type: application/json; charset=utf-8');
+        header('Content-Type: application/json; charset=utf-8');
     }
 
     private function parseFilter( $args = array() ) {

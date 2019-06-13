@@ -58,14 +58,6 @@
     ],
     "Dataviz3.1" : [
         {
-            Cat1 : Développeurs
-SS Cat1.1 : Front | SS Cat1.2 : Back | SS Cat1.3 : Fullstack | SS Cat1.4 : Poursuites d’études dans le dev
-Cat2 : Designer
-SS Cat2.1 : UX | SS Cat2.2 : UI | SS Cat2.3:  DA | SS Cat2.4:  Poursuites d’études dans le design
-Cat3 : Management
-SS Cat3.1 : Lead dev & consor | SS Cat3.2 : Lead design & consor
-Cat4 : Recherche d’emploi
-Cat5 : Poursuite d’études
             "Poursuites d'étude" : "23%",
             "Recherche d’emploi" : "5%",
             "Management" : "7%",
@@ -100,6 +92,13 @@ Cat5 : Poursuite d’études
             "Marketing & Communication" : "60%",
             "Poursuite d’étude" : "30%",
             "Recherche d’emploi" : "10%"
+        }
+    ],
+    "Dataviz4.1" : [
+        {
+            "Employe" : "15000, 25000",
+            "Cadre" : "25000, 44000",
+            "Indépendant" : "15000, 30000"
         }
     ]
 }
