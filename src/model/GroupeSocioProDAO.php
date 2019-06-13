@@ -4,6 +4,7 @@ namespace App\model;
 
 use App\model\DAO;
 use App\dataviz\Entities\Entite;
+use App\dataviz\Entities\EntityFactory;
 use App\dataviz\datavizs\FilterList;
 use App\dataviz\Entities\GroupeSocioPro;
 
@@ -18,7 +19,10 @@ class GroupeSocioProDAO extends DAO
     }
 
     public function getOne($id) {
-
+        $sql = "SELECT * FROM " . self::TABLE_NAME . " WHERE ". self::ID_NAME ." = $id";
+        $sth = $this->db->query($sql);
+        $props = $sth->fetch();
+        return EntityFactory::get('groupe_socio_pro', $props);
     }
 
     public function getAll(FilterList $filters = null) { }

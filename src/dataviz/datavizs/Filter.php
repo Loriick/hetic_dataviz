@@ -10,7 +10,7 @@ class Filter
     public function __construct($name, $value, $operator = null) {
         $this->name = $name;
         $this->value = $value;
-        $this->operator = $operator;
+        $this->operator = $operator ? $operator : "=";
     }
 
     public function name() {

@@ -27,7 +27,7 @@ class AssocDataPeriodeDAO extends DAO
             $count = 0;
             foreach($filters->getList() as $filter) {
 
-                $sql .= $filter->name() ." = '". $filter->value() ."'";
+                $sql .= $filter->name() . $filter->operator() ."'". $filter->value() ."'";
                 $count++;
 
                 if( $count < count($filters->getList()) ) {

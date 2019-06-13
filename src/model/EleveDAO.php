@@ -18,7 +18,8 @@ class EleveDAO extends DAO
     public function getOne($id) {
         $sql = "SELECT * FROM " . self::TABLE_NAME . " WHERE idEleve = $id";
         $sth = $this->db->query($sql);
-        return $sth->fetch();
+        $props = $sth->fetch();
+        return new Eleve($props);
     }
 
     public function getAll( FilterList $filters = null ) {
