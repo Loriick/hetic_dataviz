@@ -94,10 +94,17 @@
             "Recherche d’emploi" : "10%"
         }
     ],
+    "Dataviz3.4" : [
+        {
+            "Technicien superieur" : "60%",
+            "Cadre" : "30%",
+            "Indépendant" : "10%"
+        }
+    ],
     "Dataviz4.1" : [
         {
-            "Employe" : "15000, 25000",
-            "Cadre" : "25000, 44000",
+            "Développeur" : "15000, 25000",
+            "Design" : "25000, 44000",
             "Indépendant" : "15000, 30000"
         }
     ]
